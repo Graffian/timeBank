@@ -1,6 +1,12 @@
 import { JSX } from "react";
-
+import { createClient } from "@supabase/supabase-js";
 export default function Signup():JSX.Element{
+  const supabaseUrl = process.env.SUPABASE_PROJECT_URL
+  const supabaseKey = process.env.SUPABASE_KEY
+  if (!supabaseUrl || !supabaseKey){
+    throw new Error("Missing supabase url or key")
+  }
+  const supabase = createClient(supabaseUrl , supabaseKey)
   return(
     <>
     <div className="flex flex-col justify-center items-center bg-black text-white h-screen w-full ">

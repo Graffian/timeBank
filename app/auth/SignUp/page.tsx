@@ -1,8 +1,7 @@
 "use client";
 
 import { JSX, useRef } from "react";
-import { createClient } from "@supabase/supabase-js";
-
+import supabase from "../../supabase"
 import { useRouter } from 'next/navigation'
 
 
@@ -12,15 +11,9 @@ export default function Signup():JSX.Element{
   const fullNameRef = useRef<HTMLInputElement>(null)
   const deptRef = useRef<HTMLInputElement>(null)
   const collegeRegdRef = useRef<HTMLInputElement>(null)
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_PROJECT_URL
-  const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_KEY
-  if (!supabaseUrl || !supabaseKey){
-    throw new Error("Missing supabase url or key")
-  }
-  const supabase = createClient(supabaseUrl , supabaseKey)
       const router = useRouter();
     async function handleSignUp(){
-      
+
       const email = emailRef.current?.value
       const password = passRef.current?.value
       const fullName = fullNameRef.current?.value

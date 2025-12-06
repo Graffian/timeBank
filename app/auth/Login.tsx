@@ -2,11 +2,11 @@ export default function Login(){
   return(
     <>
       <div>
-        <input placeholder='Enter your Email'/>
-        <input placeholder='Enter your Password'/>
+        <input type="email" placeholder='Enter your college Email'/>
+        <input type="password" placeholder='Enter your Password'/>
       </div>
       <div>
-        <button>Login</button>
+        <button className="cursor-pointer">Login</button>
       </div>
   
     </>

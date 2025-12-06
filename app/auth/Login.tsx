@@ -13,7 +13,7 @@ export default function Login(): JSX.Element {
       <div  className='flex flex-col gap-5 '>
         <input className='border-slate-600 bg-blue-950 w-[400px] h-[30px] rounded' type="email" placeholder='Enter your college Email'/>
         <input className='border-slate-600 bg-blue-950 w-[400px] h-[30px] rounded' type="password" placeholder='Enter your Password'/>
-       <span className='text-blue-700 font-mono cursor-pointer hover:underline' onClick={handleSingup}>Don't have a account?Signup</span>
+       <span className='text-blue-700 font-mono cursor-pointer hover:underline' onClick={handleSingup}>Donot have a account?Signup</span>
       </div>
 
       <div>

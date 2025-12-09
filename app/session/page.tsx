@@ -19,7 +19,7 @@ export default function LiveSession() {
     return () => clearInterval(timer);
   }, []);
 
-  const formatTime = (seconds) => {
+  const formatTime = (seconds : number) => {
     const mins = Math.floor(seconds / 60);
     const secs = seconds % 60;
     return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
@@ -173,7 +173,7 @@ export default function LiveSession() {
           </div>
 
           {/* Quick Reactions */}
-          <div className="p-3 border-t border-white/10 flex-shrink-0">
+          <div className="p-3 border-t border-white/10 shrink-0">
             <div className="flex items-center justify-center gap-2 mb-3">
               <button 
                 onClick={() => addReaction('👍')}

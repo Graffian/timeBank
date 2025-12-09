@@ -25,6 +25,7 @@ export default function Login(): JSX.Element {
       return
     }
     console.log("ERROR Scanning db" , error)
+    router.push('/page/page_afterauth');
   }
   return(
     <>
@@ -36,7 +37,7 @@ export default function Login(): JSX.Element {
       </div>
 
       <div>
-        <button onClick={handleLogin} className="cursor-pointer bg-blue-700 rounded text-white w-[200px] h-10 hover:bg-white hover:text-black">Login</button>
+        <button onClick={handleLogin} className="cursor-pointer bg-blue-700 rounded text-white w-[200px] h-10 hover:bg-white hover:text-black" >Login</button>
       </div>
     </div>
   
